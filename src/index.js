@@ -5,15 +5,19 @@ import Involvement from './modules/InvolvementAPI';
 const tvMaze = new TVMaze ();
 const involvement = new Involvement();
 
-const newShow = async (url) => {
-tvMaze.createShowLi(await tvMaze.getShowInfo(url));
-};
-for (let i = 1; i <= 6; i += 1) {
-  newShow(`https://api.tvmaze.com/shows/${i}`)
-}
-
 const getLikes = async (id) => {
-const likes = await involvement.getLikes();
-console.log(likes.find(show => show.item_id === id));
+const likesData = await involvement.getLikes();
+const show = likesData.find(show => show.item_id === id);
+return show.likes;
 };
-getLikes('6');
+
+const newShow = async (url, likes) => {
+  tvMaze.createShowLi(await tvMaze.getShowInfo(url), likes);
+  };
+
+const populateShows = async() => {
+  for (let i = 1; i <= 6; i += 1) {
+    await newShow(`https://api.tvmaze.com/shows/${i}`, await getLikes(`${i}`));
+  }
+}
+populateShows();
