@@ -11,10 +11,9 @@ tvMaze.createShowLi(await tvMaze.getShowInfo(url));
 for (let i = 1; i <= 6; i += 1) {
   newShow(`https://api.tvmaze.com/shows/${i}`)
 }
-const getLikes = async () => {
-const likes = await involvement.getLikes();
-console.log(likes ?? 0);
-};
-getLikes();
 
-involvement.addLike(1);
+const getLikes = async (id) => {
+const likes = await involvement.getLikes();
+console.log(likes.find(show => show.item_id === id));
+};
+getLikes('6');
