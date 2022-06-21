@@ -116,7 +116,7 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _assets_index_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./assets/index.css */ \"./src/assets/index.css\");\n/* harmony import */ var _modules_TVMazeAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/TVMazeAPI.js */ \"./src/modules/TVMazeAPI.js\");\n\n\n\nconst tvMaze = new _modules_TVMazeAPI_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"] ();\n\nconst newShow = async (url) => {\ntvMaze.createShowLi(await tvMaze.getShowInfo(url));\n};\nfor (let i = 0; i <= 6; i += 1) {\n  newShow(`https://api.tvmaze.com/shows/${i}`)\n}\n\n\n\n//# sourceURL=webpack://tv-shows-network/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _assets_index_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./assets/index.css */ \"./src/assets/index.css\");\n/* harmony import */ var _modules_TVMazeAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/TVMazeAPI.js */ \"./src/modules/TVMazeAPI.js\");\n\n\n\nconst tvMaze = new _modules_TVMazeAPI_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"] ();\n\nconst newShow = async (url) => {\ntvMaze.createShowLi(await tvMaze.getShowInfo(url));\n};\nfor (let i = 1; i <= 6; i += 1) {\n  newShow(`https://api.tvmaze.com/shows/${i}`)\n}\n\n\n\n//# sourceURL=webpack://tv-shows-network/./src/index.js?");
 
 /***/ }),
 
