@@ -1,5 +1,5 @@
 import './assets/index.css';
-import TVMaze from './modules/TVMazeAPI.js';
+import TVMaze from './modules/tvMazeAPI.js';
 
 const tvMaze = new TVMaze();
 
