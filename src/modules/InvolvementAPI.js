@@ -4,9 +4,12 @@ class Involvement {
    this.appID = 'wWiBGZy0Ro0ezfkPSzh8';
   }
 
-  addLike = (id) => {
-      fetch (`${this.baseURL}/apps/${this.appID}/likes`, {
+  addLike = async (id) => {
+      await fetch (`${this.baseURL}/apps/${this.appID}/likes`, {
       method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
       body: JSON.stringify({
         "item_id": `${id}`,
       }),
@@ -14,7 +17,9 @@ class Involvement {
   };
 
   getLikes = async () => {
-    await fetch (`${this.baseURL}/apps/${this.appID}/likes`)
+   const response = await fetch (`${this.baseURL}/apps/${this.appID}/likes`)
+   .then(response => response.json())
+   return response;
   };
 
   createApp = async () => {
