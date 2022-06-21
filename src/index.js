@@ -11,17 +11,19 @@ const getLikes = async (id) => {
   return show.likes;
 };
 
-const newShow = async (url, likes) => tvMaze.createShowLi(await tvMaze.getShowInfo(url), likes);
+const newShow = async (url) => tvMaze.createShowLi(await tvMaze.getShowInfo(url));
 
 const populateShows = async () => {
+  const showLi = [];
   const likes = [];
   for (let i = 1; i <= 6; i += 1) {
+    showLi.push(newShow(`https://api.tvmaze.com/shows/${i}`));
     likes.push(getLikes(`${i}`));
   }
   Promise.all(likes)
     .then((results) => {
       for (let i = 1; i <= 6; i += 1) {
-        newShow(`https://api.tvmaze.com/shows/${i}`, results[i - 1]);
+        tvMaze.updateLikeNumber(i, results[i - 1]);
       }
     });
 };
