@@ -1,5 +1,5 @@
 class TVMaze {
-  createShowLi = (show) => {
+  createShowLi = (show, likes) => {
     const homepageUl = document.getElementById('showList');
     const showLi = document.createElement('li');
     const showImg = document.createElement('img');
@@ -14,6 +14,7 @@ class TVMaze {
     showComments.setAttribute('id', `comment${show.id}`);
     showTitle.innerHTML = show.name;
     showComments.innerHTML = 'Comments';
+    showLikes.innerHTML = likes;
     showLi.append(showImg, showTitle, showLike, showLikes, showComments);
     homepageUl.append(showLi);
     return showLi;
