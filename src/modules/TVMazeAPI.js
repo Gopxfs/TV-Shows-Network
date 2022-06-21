@@ -11,6 +11,7 @@ class TVMaze {
     showLike.setAttribute('type', 'checkbox');
     showImg.setAttribute('src', show.image.original);
     showImg.setAttribute('height', 200);
+    showComments.setAttribute('id', `comment${show.id}`);
     showTitle.innerHTML = show.name;
     showComments.innerHTML = 'Comments';
     showLi.append(showImg,showTitle,showLike,showLikes,showComments);
