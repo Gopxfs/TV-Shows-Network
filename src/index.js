@@ -1,6 +1,6 @@
 import './assets/index.css';
-import TVMaze from './modules/TVMazeAPI.js';
-import Involvement from './modules/InvolvementAPI.js';
+import TVMaze from './modules/tvMazeAPI.js';
+import Involvement from './modules/involvementAPI.js';
 
 const tvMaze = new TVMaze();
 const involvement = new Involvement();
