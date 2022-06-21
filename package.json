@@ -1,7 +1,7 @@
 {
-  "name": "music-network",
+  "name": "tv-shows-network",
   "version": "1.0.0",
-  "description": "An application that shows songs names and allows the user to like/comment.",
+  "description": "An application that displays TV shows info and allows the user to like/comment.",
   "main": "index.js",
   "scripts": {
     "test": "jest",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Gopxfs/Music-Network.git"
+    "url": "git+https://github.com/Gopxfs/TV-Shows-Network.git"
   },
   "author": "@Gopxfs and @jevazquezb",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Gopxfs/Music-Network/issues"
+    "url": "https://github.com/Gopxfs/TV-Shows-Network/issues"
   },
-  "homepage": "https://github.com/Gopxfs/Music-Network#readme",
+  "homepage": "https://github.com/Gopxfs/TV-Shows-Network#readme",
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.18.2",
     "babel-eslint": "^10.1.0",
