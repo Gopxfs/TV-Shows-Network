@@ -1,6 +1,6 @@
-class TVMaze { 
+class TVMaze {
   createShowLi = (show) => {
-    const homepageUl = document.getElementById('showList')
+    const homepageUl = document.getElementById('showList');
     const showLi = document.createElement('li');
     const showImg = document.createElement('img');
     const showTitle = document.createElement('h2');
@@ -14,7 +14,7 @@ class TVMaze {
     showComments.setAttribute('id', `comment${show.id}`);
     showTitle.innerHTML = show.name;
     showComments.innerHTML = 'Comments';
-    showLi.append(showImg,showTitle,showLike,showLikes,showComments);
+    showLi.append(showImg, showTitle, showLike, showLikes, showComments);
     homepageUl.append(showLi);
     return showLi;
   }
@@ -22,8 +22,8 @@ class TVMaze {
   getShowInfo = async (url) => {
     let show;
     await fetch(url)
-    .then(response => response.json())
-    .then((response => {show  = response}));
+      .then((response) => response.json())
+      .then(((response) => { show = response; }));
     return show;
   };
 }
