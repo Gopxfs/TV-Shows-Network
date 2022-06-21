@@ -6,7 +6,7 @@ const tvMaze = new TVMaze ();
 const newShow = async (url) => {
 tvMaze.createShowLi(await tvMaze.getShowInfo(url));
 };
-for (let i = 0; i <= 6; i += 1) {
+for (let i = 1; i <= 6; i += 1) {
   newShow(`https://api.tvmaze.com/shows/${i}`)
 }
 
