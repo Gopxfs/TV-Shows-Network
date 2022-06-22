@@ -1,6 +1,6 @@
 import Close from '../assets/images/delete.png';
 import { sendComment } from './api_comments.js';
-import refresh from './refresh.js'
+import refresh from './refresh.js';
 
 function closePopup() {
   const popCont = document.querySelector('.popup-container');
@@ -55,7 +55,7 @@ const popup = (show) => {
   const form = document.querySelector('form');
 
   refresh(retrievingLink);
-  
+
   form.addEventListener('submit', (e) => {
     e.preventDefault();
     const newComment = sendComment(userName.value, userComment.value, commentLink, show.id);

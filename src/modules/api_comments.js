@@ -21,6 +21,6 @@ const retrieveComments = async (url) => {
   const response = await fetch(request);
   const output = await response.json();
   return output;
-}
+};
 
 export { sendComment, retrieveComments };
