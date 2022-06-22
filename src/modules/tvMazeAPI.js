@@ -1,28 +1,38 @@
+import involvement from "../index.js";
+
 class TVMaze {
   createShowLi = (show) => {
     const homepageUl = document.getElementById('showList');
     const showLi = document.createElement('li');
     const showImg = document.createElement('img');
     const showTitle = document.createElement('h2');
-    const showLike = document.createElement('input');
+    const showLike = document.createElement('button');
     const showLikes = document.createElement('p');
     const showComments = document.createElement('button');
     showImg.setAttribute('alt', 'Show thumbnail');
-    showLike.setAttribute('type', 'checkbox');
     showImg.setAttribute('src', show.image.original);
     showImg.setAttribute('height', 200);
     showComments.setAttribute('id', `comment${show.id}`);
     showLikes.setAttribute('id', `likes${show.id}`);
     showTitle.innerHTML = show.name;
+    showLike.innerHTML = 'like';
     showComments.innerHTML = 'Comments';
+    this.addLike(showLike, show.id);
     showLi.append(showImg, showTitle, showLike, showLikes, showComments);
     homepageUl.append(showLi);
     return showLi;
   }
-
+  
   updateLikeNumber = (id, likes) => {
     const showLikes = document.getElementById(`likes${id}`);
     showLikes.innerHTML = `${likes}`;
+  };
+
+  addLike = async (likeButton, id) => {
+    likeButton.addEventListener('click', () => {
+      involvement.addLike(id);
+      likeButton.setAttribute('disabled', '');
+    });
   };
 
   getShowInfo = async (url) => {
