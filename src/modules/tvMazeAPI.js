@@ -1,7 +1,7 @@
 class TVMaze {
-  constructor (involvement) {
+  constructor(involvement) {
     this.involvement = involvement;
-  };
+  }
 
   createShowLi = (show) => {
     const homepageUl = document.getElementById('showList');
