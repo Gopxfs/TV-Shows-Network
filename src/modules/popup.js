@@ -32,7 +32,7 @@ const popup = (show) => {
                           <span>Rating: ${show.rating.average}</span>
                         </div>      
                         <div class="summary">${show.summary}</div>
-                        <h3 class="subtitle">Comments (2)</h3>
+                        <h3 id="com${show.id}" class="subtitle"></h3>
                         <ul class="comment-list"></ul>
                         <h3 class="subtitle">Add a comment</h3>
                         <form>
@@ -54,13 +54,13 @@ const popup = (show) => {
   const userComment = document.querySelector('#comment-area');
   const form = document.querySelector('form');
 
-  refresh(retrievingLink);
+  refresh(retrievingLink, show.id);
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
     const newComment = sendComment(userName.value, userComment.value, commentLink, show.id);
     newComment.then(() => {
-      refresh(retrievingLink);
+      refresh(retrievingLink, show.id);
     });
     e.target.reset();
   });
