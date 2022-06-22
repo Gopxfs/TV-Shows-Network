@@ -69,6 +69,14 @@ b {
   margin-bottom: 2vh;
 }
 
+.comment-list {
+  margin-bottom: 2vh;
+}
+
+.li-pop {
+  margin-bottom: 2vh;
+}
+
 form {
   display: flex;
   flex-direction: column;

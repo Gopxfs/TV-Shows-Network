@@ -1,5 +1,6 @@
 import Close from '../assets/images/delete.png';
-import sendComment from './api_comments.js';
+import { sendComment } from './api_comments.js';
+import refresh from './refresh.js'
 
 function closePopup() {
   const popCont = document.querySelector('.popup-container');
@@ -47,19 +48,21 @@ const popup = (show) => {
   const baseLink = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/';
   const appId = 'wWiBGZy0Ro0ezfkPSzh8';
   const commentLink = `${baseLink}${appId}/comments`;
-  // const retrieveLink = `${commentLink}?item_id=item1`;
+  const retrievingLink = `${commentLink}?item_id=item${show.id}`;
 
   const userName = document.querySelector('#user-name');
   const userComment = document.querySelector('#comment-area');
   const form = document.querySelector('form');
+
+  refresh(retrievingLink);
+  
   form.addEventListener('submit', (e) => {
     e.preventDefault();
-    sendComment(userName.value, userComment.value, commentLink, show.id);
-    // const newComment = sendComment(userName.value, userComment.value, commentLink);
-    // newComment.then(commentId => {
-    //   console.log(getCommentLink);
-    //   // refresh(getCommentLink);
-    // });
+    const newComment = sendComment(userName.value, userComment.value, commentLink, show.id);
+    newComment.then(() => {
+      refresh(retrievingLink);
+    });
+    e.target.reset();
   });
 };
 
