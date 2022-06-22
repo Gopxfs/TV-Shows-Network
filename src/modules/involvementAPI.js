@@ -23,8 +23,8 @@ class Involvement {
   };
 
   getLikesByID = async (id) => {
-     const showData = await this.getLikes();
-     const showLikes = showData.find(show => show.item_id === id)
+    const showData = await this.getLikes();
+    const showLikes = showData.find((show) => show.item_id === id);
     return showLikes.likes;
   };
 

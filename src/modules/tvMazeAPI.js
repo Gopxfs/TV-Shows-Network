@@ -1,6 +1,8 @@
-import involvement from "../index.js";
-
 class TVMaze {
+  constructor (involvement) {
+    this.involvement = involvement;
+  };
+
   createShowLi = (show) => {
     const homepageUl = document.getElementById('showList');
     const showLi = document.createElement('li');
@@ -22,17 +24,17 @@ class TVMaze {
     homepageUl.append(showLi);
     return showLi;
   }
-  
+
   updateLikeNumber = (id, likes) => {
     const showLikes = document.getElementById(`likes${id}`);
     showLikes.innerHTML = `${likes}`;
   };
- 
+
   addLikeEvent = async (likeButton, id) => {
     likeButton.addEventListener('click', async () => {
-      involvement.addLike(id);
-      const likes = await involvement.getLikesByID(`${id}`)
-      this.updateLikeNumber(id, likes+1);
+      this.involvement.addLike(id);
+      const likes = await this.involvement.getLikesByID(`${id}`);
+      this.updateLikeNumber(id, likes + 1);
       likeButton.setAttribute('disabled', '');
     });
   };
