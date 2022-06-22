@@ -22,6 +22,12 @@ class Involvement {
     return response;
   };
 
+  getLikesByID = async (id) => {
+     const showData = await this.getLikes();
+     const showLikes = showData.find(show => show.item_id === id)
+    return showLikes.likes;
+  };
+
   createApp = async () => {
     await fetch(`${this.baseURL}/apps/`, {
       method: 'POST',
