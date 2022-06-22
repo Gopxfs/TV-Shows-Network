@@ -37,9 +37,9 @@ class TVMaze {
 
   addLikeEvent = async (likeButton, id) => {
     likeButton.addEventListener('click', async () => {
-      this.involvement.addLike(id);
+      await this.involvement.addLike(id);
       const likes = await this.involvement.getLikesByID(`${id}`);
-      this.updateLikeNumber(id, likes + 1);
+      this.updateLikeNumber(id, likes);
       likeButton.setAttribute('disabled', '');
     });
   };
