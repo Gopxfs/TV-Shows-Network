@@ -1,6 +1,12 @@
+import './assets/reset.css';
 import './assets/index.css';
+import './assets/popup.css';
+import Logo from './assets/images/logo.png';
 import TVMaze from './modules/tvMazeAPI.js';
 import Involvement from './modules/involvementAPI.js';
+
+const logoImg = document.querySelector('#logo');
+logoImg.src = Logo;
 
 const involvement = new Involvement();
 const tvMaze = new TVMaze(involvement);

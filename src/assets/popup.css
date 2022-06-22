@@ -1,0 +1,101 @@
+.popup-container {
+  display: none;
+  position: fixed;
+  background-color: transparent;
+  overflow: auto;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.popup-body {
+  background-color: #fff;
+  width: 95%;
+  margin: 2.5% auto;
+  position: relative;
+  border: 2px solid #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.img-poster {
+  width: 20vw;
+  margin-top: 2.5vh;
+}
+
+.close-pop {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  position: absolute;
+  right: 2%;
+  top: 1%;
+  cursor: pointer;
+}
+
+.close-img {
+  width: 30px;
+  height: 30px;
+}
+
+.pop-title {
+  margin: 3vh;
+  font-size: 3vw;
+  font-weight: bold;
+}
+
+.grid-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 50%;
+  grid-gap: 10px;
+  justify-items: center;
+  align-items: center;
+}
+
+b {
+  font-weight: bold;
+}
+
+.summary {
+  width: 70%;
+  margin: 3vh 0 5vh 0;
+}
+
+.subtitle {
+  font-size: 2.2vw;
+  font-weight: bold;
+  margin-bottom: 2vh;
+}
+
+.comment-list {
+  margin-bottom: 2vh;
+}
+
+.li-pop {
+  margin-bottom: 2vh;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2.5vh;
+}
+
+.input-data {
+  border: 1px solid #000;
+  outline: none;
+  padding: 0.3rem;
+  box-sizing: border-box;
+  font-size: 0.8rem;
+  margin-bottom: 1.2rem;
+}
+
+.sub-btn {
+  align-self: center;
+  box-shadow: 4px 5px #000;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
