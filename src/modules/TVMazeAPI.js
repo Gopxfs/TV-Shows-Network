@@ -1,4 +1,4 @@
-import { popup } from './popup.js'
+import popup from './popup.js';
 
 class TVMaze {
   createShowLi = (show) => {

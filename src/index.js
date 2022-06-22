@@ -3,12 +3,11 @@ import './assets/index.css';
 import './assets/popup.css';
 import Logo from './assets/images/logo.png';
 import TVMaze from './modules/TVMazeAPI.js';
-import newApp from './modules/newApp.js'
 
 const logoImg = document.querySelector('#logo');
 logoImg.src = Logo;
 
-const baseUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/';
+// const baseUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/';
 // const newAppUrl = `${baseUrl}apps/`;
 
 // const appId = newApp(newAppUrl);
