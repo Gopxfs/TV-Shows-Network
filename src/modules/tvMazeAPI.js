@@ -12,12 +12,18 @@ class TVMaze {
     showImg.setAttribute('src', show.image.original);
     showImg.setAttribute('height', 200);
     showComments.setAttribute('id', `comment${show.id}`);
+    showLikes.setAttribute('id', `likes${show.id}`);
     showTitle.innerHTML = show.name;
     showComments.innerHTML = 'Comments';
     showLi.append(showImg, showTitle, showLike, showLikes, showComments);
     homepageUl.append(showLi);
     return showLi;
   }
+
+  updateLikeNumber = (id, likes) => {
+    const showLikes = document.getElementById(`likes${id}`);
+    showLikes.innerHTML = `${likes}`;
+  };
 
   getShowInfo = async (url) => {
     let show;
