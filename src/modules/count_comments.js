@@ -1,6 +1,6 @@
 const countComments = (array) => {
   const commentsNumber = array.length;
-  return commentsNumber  
+  return commentsNumber;
 };
 
 export { countComments as default };

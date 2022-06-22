@@ -19,7 +19,7 @@ const refresh = (url, id) => {
       tmpList = comments;
     }
     const commentsNumber = countComments(tmpList);
-    commentSubtitle.textContent = `Comments (${commentsNumber})`;    
+    commentSubtitle.textContent = `Comments (${commentsNumber})`;
   });
 };
 

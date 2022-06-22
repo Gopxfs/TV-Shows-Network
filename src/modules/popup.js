@@ -49,7 +49,7 @@ const popup = (show) => {
   const appId = 'wWiBGZy0Ro0ezfkPSzh8';
   const commentLink = `${baseLink}${appId}/comments`;
   const retrievingLink = `${commentLink}?item_id=item${show.id}`;
-  
+
   const userName = document.querySelector('#user-name');
   const userComment = document.querySelector('#comment-area');
   const form = document.querySelector('form');
