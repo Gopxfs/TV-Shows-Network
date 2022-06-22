@@ -4,6 +4,8 @@ import Involvement from './modules/involvementAPI.js';
 
 const involvement = new Involvement();
 const tvMaze = new TVMaze(involvement);
+const displayShowQuantity = document.getElementById('displayShowQuantity');
+let howManyShows = 0;
 
 const getLikes = async (id) => {
   const likesData = await involvement.getLikes();
@@ -19,6 +21,7 @@ const populateShows = async () => {
   for (let i = 1; i <= 6; i += 1) {
     showLi.push(newShow(`https://api.tvmaze.com/shows/${i}`));
     likes.push(getLikes(`${i}`));
+    howManyShows += 1;
   }
   Promise.all(likes)
     .then((results) => {
@@ -28,3 +31,4 @@ const populateShows = async () => {
     });
 };
 populateShows();
+displayShowQuantity.innerHTML += `(${howManyShows})`;
