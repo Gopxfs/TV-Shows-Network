@@ -17,7 +17,7 @@ class TVMaze {
     showTitle.innerHTML = show.name;
     showLike.innerHTML = 'like';
     showComments.innerHTML = 'Comments';
-    this.addLike(showLike, show.id);
+    this.addLikeEvent(showLike, show.id);
     showLi.append(showImg, showTitle, showLike, showLikes, showComments);
     homepageUl.append(showLi);
     return showLi;
@@ -27,10 +27,12 @@ class TVMaze {
     const showLikes = document.getElementById(`likes${id}`);
     showLikes.innerHTML = `${likes}`;
   };
-
-  addLike = async (likeButton, id) => {
-    likeButton.addEventListener('click', () => {
+ 
+  addLikeEvent = async (likeButton, id) => {
+    likeButton.addEventListener('click', async () => {
       involvement.addLike(id);
+      const likes = await involvement.getLikesByID(`${id}`)
+      this.updateLikeNumber(id, likes+1);
       likeButton.setAttribute('disabled', '');
     });
   };
