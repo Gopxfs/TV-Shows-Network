@@ -1,4 +1,5 @@
 import Close from '../assets/images/delete.png';
+import sendComment from './api_comments.js';
 
 function closePopup() {
   const popCont = document.querySelector('.popup-container');
@@ -30,10 +31,36 @@ const popup = (show) => {
                           <span>Rating: ${show.rating.average}</span>
                         </div>      
                         <div class="summary">${show.summary}</div>
+                        <h3 class="subtitle">Comments (2)</h3>
+                        <ul class="comment-list"></ul>
+                        <h3 class="subtitle">Add a comment</h3>
+                        <form>
+                          <input id="user-name" class="input-data" type="text" placeholder="Your name" required>
+                          <textarea id="comment-area" class="input-data" rows="5" cols="30" placeholder="Your insights" required></textarea>
+                          <input id="submit" class="sub-btn" type="submit" value="Comment" title="Click this or press enter to submit">            
+                        </form>
                       </div>`;
 
   const closePop = document.querySelector('.close-pop');
   closePop.addEventListener('click', closePopup);
+
+  const baseLink = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/';
+  const appId = 'wWiBGZy0Ro0ezfkPSzh8';
+  const commentLink = `${baseLink}${appId}/comments`;
+  // const retrieveLink = `${commentLink}?item_id=item1`;
+
+  const userName = document.querySelector('#user-name');
+  const userComment = document.querySelector('#comment-area');
+  const form = document.querySelector('form');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    sendComment(userName.value, userComment.value, commentLink, show.id);
+    // const newComment = sendComment(userName.value, userComment.value, commentLink);
+    // newComment.then(commentId => {
+    //   console.log(getCommentLink);
+    //   // refresh(getCommentLink);
+    // });
+  });
 };
 
 export { popup as default };
