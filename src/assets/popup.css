@@ -2,6 +2,7 @@
   display: none;
   position: fixed;
   background-color: transparent;
+  overflow: auto;
   top: 0;
   left: 0;
   width: 100%;
@@ -29,7 +30,7 @@
   background-color: transparent;
   position: absolute;
   right: 2%;
-  top: 3%;
+  top: 2%;
   cursor: pointer;
 }
 
@@ -60,4 +61,32 @@ b {
 .summary {
   width: 70%;
   margin: 3vh 0 5vh 0;
+}
+
+.subtitle {
+  font-size: 2.2vw;
+  font-weight: bold;
+  margin-bottom: 2vh;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2.5vh;
+}
+
+.input-data {
+  border: 1px solid #000;
+  outline: none;
+  padding: 0.3rem;
+  box-sizing: border-box;
+  font-size: 0.8rem;
+  margin-bottom: 1.2rem;
+}
+
+.sub-btn {
+  align-self: center;
+  box-shadow: 4px 5px #000;
+  margin-bottom: 5px;
+  cursor: pointer;
 }
