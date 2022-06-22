@@ -16,4 +16,11 @@ const sendComment = async (name, comment, url, id) => {
   });
 };
 
-export { sendComment as default };
+const retrieveComments = async (url) => {
+  const request = new Request(url);
+  const response = await fetch(request);
+  const output = await response.json();
+  return output;
+};
+
+export { sendComment, retrieveComments };
