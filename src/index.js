@@ -7,8 +7,7 @@ const tvMaze = new TVMaze(involvement);
 const displayShowQuantity = document.getElementById('displayShowQuantity');
 let howManyShows = 0;
 
-const getLikes = async (id) => {
-  const likesData = await involvement.getLikes();
+const getLikes = (id, likesData) => {
   const show = likesData.find((show) => show.item_id === id);
   if (show)
   return show.likes;
@@ -22,18 +21,23 @@ const showCounter = () => {
 };
 
 const populateShows = async () => {
+  const data = await involvement.getLikes();
   const showLi = [];
   const likes = [];
-  for (let i = 1; i <= 10; i += 1) {
+  for (let i = 1; i <= 100; i += 1) {
     if (showLi.push(newShow(`https://api.tvmaze.com/shows/${i}`))) {
-      likes.push(getLikes(`${i}`));
+      likes.push(getLikes(`${i}`, data));
       showCounter();
+    } else {
+    likes.push(false);
     }
   }
-  Promise.all(likes)
+  Promise.all(showLi)
     .then((results) => {
-      for (let i = 1; i <= 10; i += 1) {
-        tvMaze.updateLikeNumber(i, results[i - 1]);
+      for (let i = 1; i <= 100; i += 1) {
+        if(results[i-1]) {
+          tvMaze.updateLikeNumber(i, likes[i-1]);
+        }
       }
     });
 };
