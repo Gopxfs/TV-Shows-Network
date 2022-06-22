@@ -16,7 +16,7 @@ const getLikes = async (id) => {
 const newShow = async (url) => tvMaze.createShowLi(await tvMaze.getShowInfo(url));
 
 const showCounter = () => {
-  howManyShows = howManyShows += 1;
+  howManyShows += 1;
 };
 
 const populateShows = async () => {
