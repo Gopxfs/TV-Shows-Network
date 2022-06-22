@@ -23,13 +23,13 @@ const populateShows = async () => {
   const data = await involvement.getLikes();
   const showLi = [];
   const likes = [];
-  for (let i = 1; i <= 100; i += 1) {
+  for (let i = 1; i <= 101; i += 1) {
     showLi.push(newShow(`https://api.tvmaze.com/shows/${i}`));
     likes.push(getLikes(`${i}`, data));
   }
   Promise.all(showLi)
     .then((results) => {
-      for (let i = 1; i <= 100; i += 1) {
+      for (let i = 1; i <= 101; i += 1) {
         if (results[i - 1]) {
           showCounter();
           tvMaze.updateLikeNumber(i, likes[i - 1]);
