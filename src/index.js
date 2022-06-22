@@ -15,13 +15,17 @@ const getLikes = async (id) => {
 
 const newShow = async (url) => tvMaze.createShowLi(await tvMaze.getShowInfo(url));
 
+const showCounter = () => {
+  howManyShows = howManyShows += 1;
+};
+
 const populateShows = async () => {
   const showLi = [];
   const likes = [];
   for (let i = 1; i <= 6; i += 1) {
     showLi.push(newShow(`https://api.tvmaze.com/shows/${i}`));
     likes.push(getLikes(`${i}`));
-    howManyShows += 1;
+    showCounter();
   }
   Promise.all(likes)
     .then((results) => {
