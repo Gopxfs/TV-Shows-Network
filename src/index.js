@@ -10,10 +10,12 @@ let howManyShows = 0;
 const getLikes = async (id) => {
   const likesData = await involvement.getLikes();
   const show = likesData.find((show) => show.item_id === id);
+  if (show)
   return show.likes;
+  return 0;
 };
 
-const newShow = async (url) => tvMaze.createShowLi(await tvMaze.getShowInfo(url));
+const newShow = async (url) =>  tvMaze.createShowLi(await tvMaze.getShowInfo(url));
 
 const showCounter = () => {
   howManyShows += 1;
@@ -22,14 +24,15 @@ const showCounter = () => {
 const populateShows = async () => {
   const showLi = [];
   const likes = [];
-  for (let i = 1; i <= 6; i += 1) {
-    showLi.push(newShow(`https://api.tvmaze.com/shows/${i}`));
-    likes.push(getLikes(`${i}`));
-    showCounter();
+  for (let i = 1; i <= 10; i += 1) {
+    if (showLi.push(newShow(`https://api.tvmaze.com/shows/${i}`))) {
+      likes.push(getLikes(`${i}`));
+      showCounter();
+    }
   }
   Promise.all(likes)
     .then((results) => {
-      for (let i = 1; i <= 6; i += 1) {
+      for (let i = 1; i <= 10; i += 1) {
         tvMaze.updateLikeNumber(i, results[i - 1]);
       }
     });

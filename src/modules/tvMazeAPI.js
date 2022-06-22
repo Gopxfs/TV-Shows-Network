@@ -4,6 +4,7 @@ class TVMaze {
   }
 
   createShowLi = (show) => {
+    if (show.name !== 'Not Found') {
     const homepageUl = document.getElementById('showList');
     const showLi = document.createElement('li');
     const showImg = document.createElement('img');
@@ -18,11 +19,15 @@ class TVMaze {
     showLikes.setAttribute('id', `likes${show.id}`);
     showTitle.innerHTML = show.name;
     showLike.innerHTML = 'like';
+    showLikes.innerHTML = '0'
     showComments.innerHTML = 'Comments';
     this.addLikeEvent(showLike, show.id);
     showLi.append(showImg, showTitle, showLike, showLikes, showComments);
     homepageUl.append(showLi);
     return showLi;
+    } else {
+      return false;
+    }
   }
 
   updateLikeNumber = (id, likes) => {
