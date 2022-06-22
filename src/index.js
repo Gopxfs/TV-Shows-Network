@@ -7,7 +7,7 @@ import TVMaze from './modules/TVMazeAPI.js';
 const logoImg = document.querySelector('#logo');
 logoImg.src = Logo;
 
-const baseUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/';
+// const baseUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/';
 // const newAppUrl = `${baseUrl}apps/`;
 
 // const appId = newApp(newAppUrl);

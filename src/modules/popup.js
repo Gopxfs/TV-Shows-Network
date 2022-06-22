@@ -1,5 +1,5 @@
 import Close from '../assets/images/delete.png';
-import sendComment from './api_comments.js'
+import sendComment from './api_comments.js';
 
 function closePopup() {
   const popCont = document.querySelector('.popup-container');

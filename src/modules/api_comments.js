@@ -4,10 +4,10 @@ const sendComment = async (name, comment, url, id) => {
   const data = {
     item_id: `item${id}`,
     username: name,
-    comment: comment
+    comment,
   };
 
-  const response = await fetch(request, {
+  await fetch(request, {
     method: 'POST',
     body: JSON.stringify(data),
     headers: {
