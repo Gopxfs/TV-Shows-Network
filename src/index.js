@@ -2,22 +2,35 @@ import './assets/reset.css';
 import './assets/index.css';
 import './assets/popup.css';
 import Logo from './assets/images/logo.png';
-import TVMaze from './modules/TVMazeAPI.js';
+import TVMaze from './modules/tvMazeAPI.js';
+import Involvement from './modules/involvementAPI.js';
 
 const logoImg = document.querySelector('#logo');
 logoImg.src = Logo;
 
-// const baseUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/';
-// const newAppUrl = `${baseUrl}apps/`;
+const involvement = new Involvement();
+const tvMaze = new TVMaze(involvement);
 
-// const appId = newApp(newAppUrl);
-// appId.then(res => console.log(res));
-
-const tvMaze = new TVMaze();
-
-const newShow = async (url) => {
-  tvMaze.createShowLi(await tvMaze.getShowInfo(url));
+const getLikes = async (id) => {
+  const likesData = await involvement.getLikes();
+  const show = likesData.find((show) => show.item_id === id);
+  return show.likes;
 };
-for (let i = 1; i <= 6; i += 1) {
-  newShow(`https://api.tvmaze.com/shows/${i}`);
-}
+
+const newShow = async (url) => tvMaze.createShowLi(await tvMaze.getShowInfo(url));
+
+const populateShows = async () => {
+  const showLi = [];
+  const likes = [];
+  for (let i = 1; i <= 6; i += 1) {
+    showLi.push(newShow(`https://api.tvmaze.com/shows/${i}`));
+    likes.push(getLikes(`${i}`));
+  }
+  Promise.all(likes)
+    .then((results) => {
+      for (let i = 1; i <= 6; i += 1) {
+        tvMaze.updateLikeNumber(i, results[i - 1]);
+      }
+    });
+};
+populateShows();
