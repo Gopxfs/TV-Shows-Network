@@ -1,3 +1,5 @@
+import popup from './popup.js';
+
 class TVMaze {
   constructor(involvement) {
     this.involvement = involvement;
@@ -19,6 +21,10 @@ class TVMaze {
     showTitle.innerHTML = show.name;
     showLike.innerHTML = 'like';
     showComments.innerHTML = 'Comments';
+    // Add Event listener
+    showComments.addEventListener('click', () => {
+      popup(show);
+    });
     this.addLikeEvent(showLike, show.id);
     showLi.append(showImg, showTitle, showLike, showLikes, showComments);
     homepageUl.append(showLi);
