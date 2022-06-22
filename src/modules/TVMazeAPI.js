@@ -1,3 +1,5 @@
+import { popup } from './popup.js'
+
 class TVMaze {
   createShowLi = (show) => {
     const homepageUl = document.getElementById('showList');
@@ -14,6 +16,10 @@ class TVMaze {
     showComments.setAttribute('id', `comment${show.id}`);
     showTitle.innerHTML = show.name;
     showComments.innerHTML = 'Comments';
+    // Add Event listener
+    showComments.addEventListener('click', () => {
+      popup(show);
+    });
     showLi.append(showImg, showTitle, showLike, showLikes, showComments);
     homepageUl.append(showLi);
     return showLi;
