@@ -2,8 +2,8 @@ import './assets/index.css';
 import TVMaze from './modules/tvMazeAPI.js';
 import Involvement from './modules/involvementAPI.js';
 
-const tvMaze = new TVMaze();
 const involvement = new Involvement();
+const tvMaze = new TVMaze(involvement);
 
 const getLikes = async (id) => {
   const likesData = await involvement.getLikes();
