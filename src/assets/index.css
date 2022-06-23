@@ -153,4 +153,61 @@ form {
   margin-bottom: 5px;
   cursor: pointer;
 }
+
+#showList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3.5%;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-bottom: 40px;
+  background-color: #030303;
+}
+
+#showList li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+  padding-top: 6px;
+  padding-bottom: 15px;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  background-color: #161515;
+}
+
+#showList li * {
+  color: white;
+}
+
+#showList li .showTitle {
+  font-size: 25px;
+}
+
+#showList li .showLikes {
+  font-size: 18.5px;
+}
+
+#showList li .commentButton {
+  font-size: 15px;
+  background-color: #1d698c;
+  border: none;
+  padding: 8px 13px;
+  cursor: pointer;
+}
+
+#showList li .commentButton:hover {
+  background-color: #247ba3;
+}
+
+#showList li:hover {
+  transform: scale(1.03);
+}
+
+main {
+  background-color: #030303;
+}
 /*# sourceMappingURL=index.css.map */

@@ -1,0 +1,58 @@
+#showList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3.5%;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-bottom: 40px;
+  background-color: rgb(3, 3, 3);
+
+  li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 12px;
+    padding-top: 6px;
+    padding-bottom: 15px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    background-color: rgb(22, 21, 21);
+
+    * {
+      color: white;
+    }
+
+    .showTitle {
+      font-size: 25px;
+    }
+
+    // .likeButton {
+    // }
+
+    // .likeButton:disabled {
+    // }
+
+    .showLikes {
+      font-size: 18.5px;
+    }
+
+    .commentButton {
+      font-size: 15px;
+      background-color: #1d698c;
+      border: none;
+      padding: 8px 13px;
+      cursor: pointer;
+    }
+
+    .commentButton:hover {
+        background-color:rgb(36, 123, 163);
+    }
+  }
+  
+  li:hover {
+    transform: scale(1.03);
+  }
+}
