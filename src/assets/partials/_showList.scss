@@ -24,14 +24,25 @@
     margin-top: 25px;
     margin-bottom: 15px;
     background-color: rgb(22, 21, 21);
+    width: 315px;
 
     * {
       font-family: $robotoRegular;
       color: white;
     }
 
+    :nth-child(1) {
+      margin-bottom: 8px;      
+    }
+
+    .showImg {
+      width: 315px;
+      height: 450px;
+    }
+
     .showTitle {
       font-size: 25px;
+      text-align: center;
     }
 
     .likeButton {

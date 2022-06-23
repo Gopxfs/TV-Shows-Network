@@ -1,3 +1,9 @@
+@import './utilities/fonts';
+
+.hide-scroll {
+  overflow: hidden;
+}
+
 .popup-container {
   display: none;
   position: fixed;
@@ -11,19 +17,34 @@
 }
 
 .popup-body {
-  background-color: #fff;
+  background-color: rgb(22, 21, 21);
   width: 95%;
   margin: 2.5% auto;
   position: relative;
-  border: 2px solid #000;
+  border: 2px solid #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: #fff;
+  font-family: $robotoRegular;
+}
+
+.info-cont {
+  display: flex;
+  margin: 2rem 0 3rem 0;
+  padding: 0 10%;
+  gap: 10%;
+}
+
+.info-movie {
+  font-size: 1.2rem;
+  line-height: 1.7rem;
 }
 
 .img-poster {
-  width: 20vw;
+  width: 25vw;
   margin-top: 2.5vh;
+  border: 5px solid #fff;
 }
 
 .close-pop {
@@ -32,7 +53,7 @@
   background-color: transparent;
   position: absolute;
   right: 2%;
-  top: 1%;
+  top: 2%;
   cursor: pointer;
 }
 
@@ -42,15 +63,14 @@
 }
 
 .pop-title {
-  margin: 3vh;
+  margin: 3vh 0;
   font-size: 3vw;
-  font-weight: bold;
+  text-align: center;
 }
 
 .grid-info {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  width: 50%;
   grid-gap: 10px;
   justify-items: center;
   align-items: center;
@@ -61,8 +81,7 @@ b {
 }
 
 .summary {
-  width: 70%;
-  margin: 3vh 0 5vh 0;
+  margin-top: 3vh;
 }
 
 .subtitle {
@@ -73,30 +92,47 @@ b {
 
 .comment-list {
   margin-bottom: 2vh;
+  max-width: 75%;
+  max-height: 500px;
+  overflow: auto;
+  min-width: 40%;
 }
 
 .li-pop {
   margin-bottom: 2vh;
+  word-wrap: break-word;
+  line-height: 1.4rem;
 }
 
 form {
   display: flex;
   flex-direction: column;
-  margin-bottom: 2.5vh;
+  margin-bottom: 2rem;
+  width: 40%;
 }
 
 .input-data {
   border: 1px solid #000;
   outline: none;
-  padding: 0.3rem;
+  padding: 1rem;
   box-sizing: border-box;
-  font-size: 0.8rem;
+  font-size: 1rem;
   margin-bottom: 1.2rem;
+  font-family: $robotoRegular;
 }
 
 .sub-btn {
   align-self: center;
-  box-shadow: 4px 5px #000;
-  margin-bottom: 5px;
+  background-color: #1d698c;
+  border: none;
+  padding: 12px 0;
+  font-family: $robotoRegular;
+  color: white;
+  align-self: stretch;
+  font-size: 1rem;
   cursor: pointer;
+}
+
+.sub-btn:hover {
+  background-color: rgb(42, 140, 185);
 }

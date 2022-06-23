@@ -3,11 +3,15 @@ import { sendComment } from './api_comments.js';
 import refresh from './refresh.js';
 
 function closePopup() {
+  const body = document.body;
+  body.classList.remove('hide-scroll');
   const popCont = document.querySelector('.popup-container');
   popCont.style.display = 'none';
 }
 
 const popup = (show) => {
+  const body = document.body;
+  body.classList.add('hide-scroll');
   const popCont = document.querySelector('.popup-container');
   popCont.style.display = 'block';
   let genresList = '';
@@ -20,18 +24,21 @@ const popup = (show) => {
     }
   }
 
-  popCont.innerHTML = `<div class="popup-body">
-                        <img class="img-poster" src=${show.image.original}
-                        alt="Under the dome img">
+  popCont.innerHTML = `<div class="popup-body">                        
                         <button class="close-pop"><img class="close-img" src=${Close} alt="close button"></button>
-                        <h2 class="pop-title">${show.name}</h2>
-                        <div class="grid-info">
-                          <span>Country: ${show.network.country.name}</span>
-                          <span>Premiered: ${show.premiered}</span>
-                          <span>Genres: ${genresList}</span>
-                          <span>Rating: ${show.rating.average}</span>
-                        </div>      
-                        <div class="summary">${show.summary}</div>
+                        <div class="info-cont">
+                          <img class="img-poster" src=${show.image.original} alt="Under the dome img">
+                          <div class="info-movie">
+                            <h2 class="pop-title">${show.name}</h2>
+                            <div class="grid-info">
+                              <span>Country: ${show.network.country.name}</span>
+                              <span>Premiered: ${show.premiered}</span>
+                              <span>Genres: ${genresList}</span>
+                              <span>Rating: ${show.rating.average}</span>
+                            </div>      
+                            <div class="summary">${show.summary}</div>                        
+                          </div>
+                        </div>
                         <h3 id="com${show.id}" class="subtitle"></h3>
                         <ul class="comment-list"></ul>
                         <h3 class="subtitle">Add a comment</h3>

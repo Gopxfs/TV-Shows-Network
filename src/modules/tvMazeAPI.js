@@ -16,11 +16,13 @@ class TVMaze {
       const showComments = document.createElement('button');
       showImg.setAttribute('alt', 'Show thumbnail');
       showImg.setAttribute('src', show.image.original);
-      showImg.setAttribute('width', 315);
-      showImg.setAttribute('height', 450);
+      // showImg.setAttribute('min-width', 315);
+      // showImg.setAttribute('max-width', 315);
+      // showImg.setAttribute('height', 450);
       showComments.setAttribute('id', `comment${show.id}`);
       showLikes.setAttribute('id', `likes${show.id}`);
       showTitle.classList.add('showTitle');
+      showImg.classList.add('showImg');
       showLike.classList.add('likeButton');
       showLikes.classList.add('showLikes');
       showComments.classList.add('commentButton');
