@@ -31,8 +31,11 @@
 
     .likeButton {
       background: url('./images/emptyHeart.png');
-      background-size: 150px 150px;
-      padding: 500px;
+      background-size: 35px 35px;
+      background-repeat: no-repeat;
+      background-position: center;
+      border: 0;
+      padding: 20px;
     }
 
     .likeButton:disabled {
