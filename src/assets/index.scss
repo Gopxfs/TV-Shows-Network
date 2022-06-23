@@ -1,8 +1,8 @@
 @import './partials/reset';
-@import './partials/popup';
-@import './partials/showList';
-@import './partials/navbar';
 @import './partials/utilities/fonts';
+@import './partials/navbar';
+@import './partials/showList';
+@import './partials/popup';
 
 main {
   background-color: rgb(3, 3, 3);
@@ -22,7 +22,7 @@ footer {
   color: white;
 
   a {
-  text-decoration: none;
-  color: rgb(61, 154, 216);
+    text-decoration: none;
+    color: rgb(61, 154, 216);
   }
 }
