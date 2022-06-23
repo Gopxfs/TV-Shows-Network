@@ -176,6 +176,7 @@ form {
   margin-right: 2%;
   margin-bottom: 40px;
   padding-top: 66px;
+  padding-bottom: 40px;
   background-color: #030303;
 }
 
@@ -277,7 +278,37 @@ form {
   color: white;
 }
 
+@font-face {
+  font-family: Roboto-regular;
+  src: url(./fonts/roboto/roboto-v30-latin-regular.woff2);
+}
+
+@font-face {
+  font-family: Roboto-regular;
+  src: url(./fonts/roboto/roboto-v30-latin-900.woff2);
+  font-weight: 900;
+}
+
 main {
   background-color: #030303;
+}
+
+footer {
+  display: flex;
+  gap: 5px;
+  font-family: Roboto-regular, sans-serif;
+  font-size: 16px;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  background-color: #161515;
+  width: 100vw;
+  padding: 20px;
+  color: white;
+}
+
+footer a {
+  text-decoration: none;
+  color: #3d9ad8;
 }
 /*# sourceMappingURL=index.css.map */
