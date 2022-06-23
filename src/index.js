@@ -1,10 +1,6 @@
 import './assets/index.css';
-import Logo from './assets/images/logo.png';
 import TVMaze from './modules/tvMazeAPI.js';
 import Involvement from './modules/involvementAPI.js';
-
-const logoImg = document.querySelector('#logo');
-logoImg.src = Logo;
 
 const involvement = new Involvement();
 const tvMaze = new TVMaze(involvement);
@@ -39,7 +35,7 @@ const populateShows = async () => {
           tvMaze.updateLikeNumber(i, likes[i - 1]);
         }
       }
-      displayShowQuantity.innerHTML += `(${howManyShows})`;
+      displayShowQuantity.innerHTML = `Check one among our ${howManyShows} amazing shows`;
     });
 };
 populateShows();
