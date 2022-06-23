@@ -29,11 +29,15 @@
       font-size: 25px;
     }
 
-    // .likeButton {
-    // }
+    .likeButton {
+      background: url('./images/emptyHeart.png');
+      background-size: 150px 150px;
+      padding: 500px;
+    }
 
-    // .likeButton:disabled {
-    // }
+    .likeButton:disabled {
+      background-image: url('./images/fullHeart.png');
+    }
 
     .showLikes {
       font-size: 18.5px;

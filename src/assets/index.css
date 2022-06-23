@@ -187,6 +187,16 @@ form {
   font-size: 25px;
 }
 
+#showList li .likeButton {
+  background: url("./images/emptyHeart.png");
+  background-size: 150px 150px;
+  padding: 500px;
+}
+
+#showList li .likeButton:disabled {
+  background-image: url("./images/fullHeart.png");
+}
+
 #showList li .showLikes {
   font-size: 18.5px;
 }
