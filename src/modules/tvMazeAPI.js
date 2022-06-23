@@ -25,8 +25,8 @@ class TVMaze {
       showLikes.classList.add('showLikes');
       showComments.classList.add('commentButton');
       showTitle.innerHTML = show.name;
-      showLikes.innerHTML = '0';
-      showComments.innerHTML = 'Comments';
+      showLikes.innerHTML = '0 likes';
+      showComments.innerHTML = 'Details';
       showComments.addEventListener('click', () => {
         popup(show);
       });
@@ -40,7 +40,7 @@ class TVMaze {
 
   updateLikeNumber = (id, likes) => {
     const showLikes = document.getElementById(`likes${id}`);
-    showLikes.innerHTML = `${likes}`;
+    showLikes.innerHTML = `${likes} likes`;
   };
 
   addLikeEvent = async (likeButton, id) => {
