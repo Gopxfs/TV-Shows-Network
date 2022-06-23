@@ -14,14 +14,14 @@
   z-index: 1;
 
   * {
-    text-decoration: none;
     font-family: $robotoRegular;
+    text-decoration: none;
   }
 
   #navLogo {
+    font-size: 28px;
     font-weight: 900;
     color: #1d83b3;
-    font-size: 28px;
   }
 
   #displayShowQuantity {
