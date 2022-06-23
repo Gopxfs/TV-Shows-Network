@@ -25,7 +25,6 @@ class TVMaze {
       showLikes.classList.add('showLikes');
       showComments.classList.add('commentButton');
       showTitle.innerHTML = show.name;
-      showLike.innerHTML = 'like';
       showLikes.innerHTML = '0';
       showComments.innerHTML = 'Comments';
       showComments.addEventListener('click', () => {
