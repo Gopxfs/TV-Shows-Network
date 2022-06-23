@@ -3,14 +3,14 @@ import { sendComment } from './api_comments.js';
 import refresh from './refresh.js';
 
 function closePopup() {
-  const body = document.body;
+  const { body } = document;
   body.classList.remove('hide-scroll');
   const popCont = document.querySelector('.popup-container');
   popCont.style.display = 'none';
 }
 
 const popup = (show) => {
-  const body = document.body;
+  const { body } = document;
   body.classList.add('hide-scroll');
   const popCont = document.querySelector('.popup-container');
   popCont.style.display = 'block';
