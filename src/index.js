@@ -1,6 +1,4 @@
-import './assets/reset.css';
 import './assets/index.css';
-import './assets/popup.css';
 import Logo from './assets/images/logo.png';
 import TVMaze from './modules/tvMazeAPI.js';
 import Involvement from './modules/involvementAPI.js';
