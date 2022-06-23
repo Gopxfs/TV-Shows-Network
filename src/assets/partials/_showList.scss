@@ -1,3 +1,5 @@
+@import './utilities/fonts.scss';
+
 #showList {
   display: flex;
   flex-direction: row;
@@ -22,6 +24,7 @@
     background-color: rgb(22, 21, 21);
 
     * {
+      font-family: $robotoRegular;
       color: white;
     }
 
@@ -36,6 +39,7 @@
       background-position: center;
       border: 0;
       padding: 20px;
+      cursor: pointer;
     }
 
     .likeButton:disabled {
@@ -47,15 +51,16 @@
     }
 
     .commentButton {
-      font-size: 15px;
+      font-size: 17.5px;
       background-color: #1d698c;
       border: none;
-      padding: 8px 13px;
+      align-self: stretch;
+      padding: 12px 0;
       cursor: pointer;
     }
 
     .commentButton:hover {
-        background-color:rgb(36, 123, 163);
+        background-color:rgb(42, 140, 185);
     }
   }
   
