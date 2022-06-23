@@ -159,6 +159,12 @@ form {
   src: url(./fonts/roboto/roboto-v30-latin-regular.woff2);
 }
 
+@font-face {
+  font-family: Roboto-regular;
+  src: url(./fonts/roboto/roboto-v30-latin-900.woff2);
+  font-weight: 900;
+}
+
 #showList {
   display: flex;
   flex-direction: row;
@@ -168,6 +174,7 @@ form {
   margin-left: 2%;
   margin-right: 2%;
   margin-bottom: 40px;
+  padding-top: 66px;
   background-color: #030303;
 }
 
@@ -226,6 +233,47 @@ form {
 
 #showList li:hover {
   transform: scale(1.03);
+}
+
+@font-face {
+  font-family: Roboto-regular;
+  src: url(./fonts/roboto/roboto-v30-latin-regular.woff2);
+}
+
+@font-face {
+  font-family: Roboto-regular;
+  src: url(./fonts/roboto/roboto-v30-latin-900.woff2);
+  font-weight: 900;
+}
+
+#navbar {
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  justify-content: space-evenly;
+  align-items: center;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  background-color: #161515;
+  width: 100vw;
+  z-index: 1;
+}
+
+#navbar * {
+  text-decoration: none;
+  font-family: Roboto-regular, sans-serif;
+}
+
+#navbar #navLogo {
+  font-weight: 900;
+  color: #1d83b3;
+  font-size: 28px;
+}
+
+#navbar #displayShowQuantity {
+  font-size: 18px;
+  color: white;
 }
 
 main {
