@@ -35,7 +35,7 @@ const populateShows = async () => {
           tvMaze.updateLikeNumber(i, likes[i - 1]);
         }
       }
-      displayShowQuantity.innerHTML = `Check one among our ${howManyShows} amazing shows`;
+      displayShowQuantity.innerHTML = `Check one among our ${howManyShows} amazing shows!`;
     });
 };
 populateShows();
