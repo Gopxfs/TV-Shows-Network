@@ -136,20 +136,24 @@ table {
   font-family: Roboto-regular;
   src: url(./fonts/roboto/roboto-v30-latin-regular.woff2);
 }
+
 @font-face {
   font-family: Roboto-regular;
   src: url(./fonts/roboto/roboto-v30-latin-900.woff2);
   font-weight: 900;
 }
+
 @font-face {
   font-family: Roboto-regular;
   src: url(./fonts/roboto/roboto-v30-latin-regular.woff2);
 }
+
 @font-face {
   font-family: Roboto-regular;
   src: url(./fonts/roboto/roboto-v30-latin-900.woff2);
   font-weight: 900;
 }
+
 #navbar {
   display: flex;
   flex-direction: row;
@@ -163,15 +167,18 @@ table {
   width: 100vw;
   z-index: 1;
 }
+
 #navbar * {
   font-family: roboto-regular, sans-serif;
   text-decoration: none;
 }
+
 #navbar #navLogo {
   font-size: 28px;
   font-weight: 900;
   color: #1d83b3;
 }
+
 #navbar #displayShowQuantity {
   font-size: 18px;
   color: white;
@@ -181,11 +188,13 @@ table {
   font-family: Roboto-regular;
   src: url(./fonts/roboto/roboto-v30-latin-regular.woff2);
 }
+
 @font-face {
   font-family: Roboto-regular;
   src: url(./fonts/roboto/roboto-v30-latin-900.woff2);
   font-weight: 900;
 }
+
 #showList {
   display: flex;
   flex-direction: row;
@@ -199,6 +208,7 @@ table {
   padding-bottom: 40px;
   background-color: rgb(3, 3, 3);
 }
+
 #showList li {
   display: flex;
   flex-direction: column;
@@ -212,21 +222,26 @@ table {
   background-color: rgb(22, 21, 21);
   width: 315px;
 }
+
 #showList li * {
   font-family: roboto-regular, sans-serif;
   color: white;
 }
+
 #showList li :nth-child(1) {
   margin-bottom: 8px;
 }
+
 #showList li .showImg {
   width: 315px;
   height: 450px;
 }
+
 #showList li .showTitle {
   font-size: 25px;
   text-align: center;
 }
+
 #showList li .likeButton {
   background: url("./images/emptyHeart.png");
   background-size: 35px 35px;
@@ -236,12 +251,15 @@ table {
   padding: 20px;
   cursor: pointer;
 }
+
 #showList li .likeButton:disabled {
   background-image: url("./images/fullHeart.png");
 }
+
 #showList li .showLikes {
   font-size: 18.5px;
 }
+
 #showList li .commentButton {
   font-size: 17.5px;
   background-color: #1d698c;
@@ -250,9 +268,11 @@ table {
   padding: 12px 0;
   cursor: pointer;
 }
+
 #showList li .commentButton:hover {
   background-color: rgb(42, 140, 185);
 }
+
 #showList li:hover {
   transform: scale(1.03);
 }
@@ -261,11 +281,13 @@ table {
   font-family: Roboto-regular;
   src: url(./fonts/roboto/roboto-v30-latin-regular.woff2);
 }
+
 @font-face {
   font-family: Roboto-regular;
   src: url(./fonts/roboto/roboto-v30-latin-900.woff2);
   font-weight: 900;
 }
+
 .hide-scroll {
   overflow: hidden;
 }
@@ -418,7 +440,8 @@ footer {
   background-color: rgb(22, 21, 21);
   color: white;
 }
+
 footer a {
   text-decoration: none;
   color: rgb(61, 154, 216);
-}/*# sourceMappingURL=index.css.map */
+}
