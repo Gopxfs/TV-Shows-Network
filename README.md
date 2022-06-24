@@ -9,7 +9,7 @@
 - [TVMaze API](https://www.tvmaze.com/api) & [Involvement API](https://www.notion.so/microverse/Involvement-API-869e60b5ad104603aa6db59e08150270)
 
 ## Live demo:
-[Live demo](#) (Not ready)
+[Live demo](https://gopxfs.github.io/TV-Shows-Network/dist/)
 
 ## Screenshots:
 
