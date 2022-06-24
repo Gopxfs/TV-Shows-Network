@@ -16,13 +16,19 @@ class TVMaze {
       const showComments = document.createElement('button');
       showImg.setAttribute('alt', 'Show thumbnail');
       showImg.setAttribute('src', show.image.original);
-      showImg.setAttribute('height', 200);
+      // showImg.setAttribute('min-width', 315);
+      // showImg.setAttribute('max-width', 315);
+      // showImg.setAttribute('height', 450);
       showComments.setAttribute('id', `comment${show.id}`);
       showLikes.setAttribute('id', `likes${show.id}`);
+      showTitle.classList.add('showTitle');
+      showImg.classList.add('showImg');
+      showLike.classList.add('likeButton');
+      showLikes.classList.add('showLikes');
+      showComments.classList.add('commentButton');
       showTitle.innerHTML = show.name;
-      showLike.innerHTML = 'like';
-      showLikes.innerHTML = '0';
-      showComments.innerHTML = 'Comments';
+      showLikes.innerHTML = '0 likes';
+      showComments.innerHTML = 'Details';
       showComments.addEventListener('click', () => {
         popup(show);
       });
@@ -36,7 +42,7 @@ class TVMaze {
 
   updateLikeNumber = (id, likes) => {
     const showLikes = document.getElementById(`likes${id}`);
-    showLikes.innerHTML = `${likes}`;
+    showLikes.innerHTML = `${likes} likes`;
   };
 
   addLikeEvent = async (likeButton, id) => {

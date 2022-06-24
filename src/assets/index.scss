@@ -1,1 +1,28 @@
-//
+@import './partials/reset';
+@import './partials/utilities/fonts';
+@import './partials/navbar';
+@import './partials/showList';
+@import './partials/popup';
+
+main {
+  background-color: rgb(3, 3, 3);
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  padding: 20px;
+  width: 100vw;
+  font-family: $robotoRegular;
+  font-size: 16px;
+  background-color: rgb(22, 21, 21);
+  color: white;
+
+  a {
+    text-decoration: none;
+    color: rgb(61, 154, 216);
+  }
+}
