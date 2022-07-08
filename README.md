@@ -1,5 +1,5 @@
 # TV Shows Network
-> A website that allow users to find, like and comment on different TV shows.
+> A website that allows users to find, like, and comment on different TV shows.
 
 ## Built With:
 - HTML
