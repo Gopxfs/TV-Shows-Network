@@ -11,6 +11,16 @@
 ## Live demo:
 [Live demo](https://gopxfs.github.io/TV-Shows-Network/dist/)
 
+## Screenshots:
+### Main page:
+![image](https://user-images.githubusercontent.com/42799579/200636495-dc4b7c18-2649-4b11-9853-4baa81809249.png)
+
+### Show details:
+![image](https://user-images.githubusercontent.com/42799579/200636657-20124f60-b13e-476b-bdb6-5b3896c6fe41.png)
+
+### Comment section:
+![image](https://user-images.githubusercontent.com/42799579/200636777-7b267ee8-9a2f-4f12-a91a-a24aae107c22.png)
+
 ## Getting Started:
 To access and change the code on your computer (using GIT):
 > Note: if you don't use git, you can download the ZIP of this repository by clicking on the "Code" button above the files list.
