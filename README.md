@@ -1,5 +1,5 @@
 # TV Shows Network
-> A website that allows users to find, like, and comment on different TV shows.
+> By fetching data from the [TVMaze API](https://www.tvmaze.com/api) to display the list of shows, and sending data to the [Involvement API](https://www.notion.so/microverse/Involvement-API-869e60b5ad104603aa6db59e08150270) to update the comments & likes, this application allows users to find, like, and comment on their favorite TV shows.
 
 ## Built With:
 - HTML
